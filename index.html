@@ -14,7 +14,7 @@
   <div class="wrap">
     <header class="topbar">
       <a class="brand" href="#main" aria-label="Daniel Igbokwe, home"><span aria-hidden="true">DI</span>Daniel Igbokwe</a>
-      <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#publications">Publications</a><a class="nav-contact" href="#contact">Contact</a></nav>
+      <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a class="nav-contact" href="#contact">Contact</a></nav>
     </header>
     <main id="main">
       <section class="hero" aria-labelledby="name">
@@ -22,7 +22,7 @@
           <p class="eyebrow">Computer science · Research &amp; software</p>
           <h1 id="name">Daniel Igbokwe</h1>
           <p class="lead">I’m interested in multimodal AI that brings perception, reasoning, memory, and human feedback together to act more intelligently.</p>
-          <p class="bio">I’m a software developer with an M.S. in Computer Science from Idaho State University. My research experience spans representative sampling for scientific machine learning, interactive algorithms, and empirical evaluation of AI-generated code.</p>
+          <p class="bio">I’m a Software Developer at GCS Holdings, Inc., with an M.S. in Computer Science from Idaho State University. I build AI-assisted document and geospatial applications. My research spans visual-memory reliability, scientific machine learning, interactive algorithms, and AI-generated code.</p>
           <div class="actions">
             <a class="button cv-download" href="assets/Daniel_Igbokwe_Academic_CV.pdf" download="Daniel_Igbokwe_Academic_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
             <a class="plain-link" href="https://github.com/igbodani">GitHub <span aria-hidden="true">↗</span></a>
@@ -57,9 +57,10 @@
           <article class="work work-pilot">
             <div class="meta"><span>Multimodal AI</span><span class="badge">Completed pilot</span></div>
             <h3>Visual-memory reliability</h3>
-            <p>When should a system answer an object-location question, and when should it decline? I built an offline evaluation pipeline using DynaMem code and ran 120 queries across two recorded DynaBench scenes, comparing age-only and age-plus-similarity rules.</p>
+            <p>When should a visual-memory system answer an object-location question, and when should it decline? I built an offline evaluation pipeline around DynaMem using SigLIP and YOLOE, replaying recorded observations for 120 queries across two DynaBench scenes. I compared answer filters based on observation age and age plus similarity, keeping the underlying models fixed.</p>
             <p class="role">Personal research project · Completed October 2026</p>
-            <details class="project-details" id="memory-details"><summary>Pilot findings &amp; limitations</summary><div class="detail-body"><p>Of 120 queries, 54 were used for development and 66 were held out. A retrospective comparison used the 42 held-out queries with known labels.</p><p>At 18 answers each, the age-plus-similarity rule had 1 geometric error versus 2 for age-only. This small, tie-sensitive difference is diagnostic evidence, not a general performance claim.</p><p>I also examined frame-cutoff sensitivity and cases where location-based scoring can conceal a wrong-object match. Queries with unknown labels were excluded from correctness scoring.</p></div></details>
+            <details class="project-details" id="memory-details"><summary>Pilot findings &amp; limitations</summary><div class="detail-body"><p>Of 120 queries, 54 were used for development and 66 were held out. A retrospective comparison used the 42 held-out queries with known labels.</p><p>At 18 answers each, the age-plus-similarity rule had 1 geometric error versus 2 for age-only. This difference depended on how tied candidates were ordered; another valid ordering eliminated it. The pilot does not establish a robust improvement or reproduce the DynaMem paper’s verified setup.</p><p>I also examined frame-cutoff sensitivity and cases where location-based scoring can conceal a wrong-object match. Queries with unknown labels were excluded from correctness scoring.</p></div></details>
+            <div class="links"><a href="https://github.com/igbodani/visual-memory-reliability">Code &amp; notebook <span aria-hidden="true">↗</span></a><a href="https://github.com/igbodani/visual-memory-reliability/blob/main/docs/RESULTS.md">Results &amp; limitations <span aria-hidden="true">↗</span></a></div>
           </article>
           <article class="work">
             <div class="meta"><span>Algorithms &amp; education</span><span>ITiCSE 2024</span></div>
@@ -78,8 +79,33 @@
         </div>
       </section>
 
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="section-head"><h2 id="experience-title">Professional experience</h2><span class="section-index" aria-hidden="true">02 / APPLIED AI</span></div>
+        <article class="experience-entry" aria-labelledby="gcs-role">
+          <div class="experience-heading">
+            <div><h3 id="gcs-role">Software Developer</h3><p class="employer">GCS Holdings, Inc.</p></div>
+            <p class="experience-date"><time datetime="2024-12">December 2024</time> – Present</p>
+          </div>
+          <p class="experience-summary">Building practical AI applications that connect document understanding, geospatial data, and human review.</p>
+          <div class="experience-projects">
+            <section aria-labelledby="document-project-title">
+              <p class="eyebrow">Document understanding · Geospatial data</p>
+              <h4 id="document-project-title">From PDFs to well-history maps</h4>
+              <p>I built and deployed a Dockerized pipeline combining OCR, local-language-model extraction, and deterministic parsing. It processed approximately 3,000 PDFs end to end in 6–8 hours.</p>
+              <p>I implemented page-type classification and submitted extracted well-history records to an ArcGIS layer, letting users explore a well’s history directly on the map.</p>
+            </section>
+            <section aria-labelledby="timber-project-title">
+              <p class="eyebrow">Human-in-the-loop AI · Forestry</p>
+              <h4 id="timber-project-title">TimberVision AI</h4>
+              <p>I implemented the application that lets field workers review and correct tree detections from drone imagery.</p>
+              <p>The system automates plot assignment and reduces manual plot review, bringing human judgment into the workflow for checking model predictions.</p>
+            </section>
+          </div>
+        </article>
+      </section>
+
       <section id="publications" class="section" aria-labelledby="publications-title">
-        <div class="section-head"><h2 id="publications-title">Publications</h2><span class="section-index" aria-hidden="true">02 / PEER REVIEWED</span></div>
+        <div class="section-head"><h2 id="publications-title">Publications</h2><span class="section-index" aria-hidden="true">03 / PEER REVIEWED</span></div>
         <ol class="pub-list">
           <li class="pub"><div class="year">2024</div><div><h3><a href="https://doi.org/10.1145/3649217.3653544">Redux: An Interactive, Dynamic Knowledge Base for Teaching NP-completeness</a></h3><p class="authors">K. Marchetti, A. Ševaljević, A. Diviney, C. Eardley, R. Phillips, R. Khadka, <strong>D. Igbokwe</strong>, and P. Bodily</p><p class="venue">ITiCSE 2024 · ACM · Vol. 1, pp. 255–261 <a href="https://doi.org/10.1145/3649217.3653544">DOI ↗</a></p></div></li>
           <li class="pub"><div class="year">2024</div><div><h3><a href="https://doi.org/10.1109/ICoSSE62619.2024.00014">A Quantitative Analysis of Quality and Consistency in AI-generated Code</a></h3><p class="authors">A. Clark, <strong>D. Igbokwe</strong>, S. Ross, and M. F. Zibran</p><p class="venue">ICoSSE 2024 · IEEE · pp. 37–41 <a href="https://doi.org/10.1109/ICoSSE62619.2024.00014">DOI ↗</a></p></div></li>
