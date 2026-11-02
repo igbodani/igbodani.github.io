@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daniel Igbokwe — software developer and computer science researcher interested in multimodal AI, visual memory, human feedback, and data-efficient machine learning.">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Daniel Igbokwe · Research</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="Daniel Igbokwe, home"><span aria-hidden="true">DI</span>Daniel Igbokwe</a>
+      <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#publications">Publications</a><a class="nav-contact" href="#contact">Contact</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <div>
+          <p class="eyebrow">Computer science · Research &amp; software</p>
+          <h1 id="name">Daniel Igbokwe</h1>
+          <p class="lead">I’m interested in multimodal AI that brings perception, reasoning, memory, and human feedback together to act more intelligently.</p>
+          <p class="bio">I’m a software developer with an M.S. in Computer Science from Idaho State University. My research experience spans representative sampling for scientific machine learning, interactive algorithms, and empirical evaluation of AI-generated code.</p>
+          <div class="actions">
+            <a class="button cv-download" href="assets/Daniel_Igbokwe_Academic_CV.pdf" download="Daniel_Igbokwe_Academic_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+            <a class="plain-link" href="https://github.com/igbodani">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="plain-link" href="mailto:danigbokwe@icloud.com">Email <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="portrait-panel" aria-label="Portrait">
+          <img class="portrait" src="assets/Daniel_Headshot.png" alt="Daniel Igbokwe" width="1200" height="1200" fetchpriority="high">
+          <p class="portrait-caption">Daniel Igbokwe <span>Research &amp; software</span></p>
+        </aside>
+      </section>
+      <aside class="focus" aria-labelledby="focus-title">
+          <h2 id="focus-title">Research interests</h2>
+          <ul><li>Multimodal intelligence</li><li>Perception &amp; memory</li><li>Reasoning &amp; action</li><li>Human feedback</li></ul>
+          
+      </aside>
+      <div class="availability"><strong>Seeking fully funded PhD opportunities for Fall 2027.</strong><span>M.S. Computer Science · Idaho State University</span></div>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-head"><h2 id="work-title">Selected work</h2><span class="section-index" aria-hidden="true">01 / RESEARCH</span></div>
+        <p class="section-intro">A selection of research projects, open-source software, and collaborative studies.</p>
+        <div class="work-toolbar"><button class="details-toggle" type="button" hidden aria-controls="quantics-details memory-details">Expand project details <span aria-hidden="true">+</span></button></div>
+        <div class="work-grid">
+          <article class="work">
+            <div class="meta"><span>Scientific machine learning</span><span>2023–2024</span></div>
+            <h3>QUANTICS</h3>
+            <p>Representative sampling for hydrogen adsorption-energy prediction in ternary Ni–Co–Pt alloys. I developed the sampling workflow, selected configurations for collaborators’ energy calculations, and evaluated models using the returned labels.</p>
+            <p class="role">M.S. thesis · Python package author and maintainer</p>
+            <details class="project-details" id="quantics-details"><summary>Methods &amp; contribution</summary><div class="detail-body"><p>The workflow combines feature scaling, dimensionality reduction, clustering, and representative selection. My contribution connected sample selection to model evaluation using labels from collaborators’ energy calculations.</p><p>The studied system was ternary Ni–Co–Pt. QUANTICS is also available as a reusable Python package.</p></div></details>
+            <div class="links"><a href="https://pypi.org/project/quantics/">Python package <span aria-hidden="true">↗</span></a><a href="https://etd.iri.isu.edu/ViewSpecimen.aspx?id=2376">Thesis record <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work work-pilot">
+            <div class="meta"><span>Multimodal AI</span><span class="badge">Completed pilot</span></div>
+            <h3>Visual-memory reliability</h3>
+            <p>When should a system answer an object-location question, and when should it decline? I built an offline evaluation pipeline using DynaMem code and ran 120 queries across two recorded DynaBench scenes, comparing age-only and age-plus-similarity rules.</p>
+            <p class="role">Personal research project · Completed October 2026</p>
+            <details class="project-details" id="memory-details"><summary>Pilot findings &amp; limitations</summary><div class="detail-body"><p>Of 120 queries, 54 were used for development and 66 were held out. A retrospective comparison used the 42 held-out queries with known labels.</p><p>At 18 answers each, the age-plus-similarity rule had 1 geometric error versus 2 for age-only. This small, tie-sensitive difference is diagnostic evidence, not a general performance claim.</p><p>I also examined frame-cutoff sensitivity and cases where location-based scoring can conceal a wrong-object match. Queries with unknown labels were excluded from correctness scoring.</p></div></details>
+          </article>
+          <article class="work">
+            <div class="meta"><span>Algorithms &amp; education</span><span>ITiCSE 2024</span></div>
+            <h3>Redux</h3>
+            <p>An interactive knowledge base for teaching NP-completeness. I implemented Graph Coloring, Karp’s 3SAT-to-Graph-Coloring reduction, a solver, a polynomial-time verifier, and interactive graph visualizations.</p>
+            <p class="role">Research contributor · Paper co-author</p>
+            <div class="links"><a href="https://doi.org/10.1145/3649217.3653544">Paper <span aria-hidden="true">↗</span></a><a href="https://portneuf.cose.isu.edu/research/redux/">Lab project page <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="work">
+            <div class="meta"><span>Empirical software research</span><span>ICoSSE 2024</span></div>
+            <h3>Evaluating AI-generated code</h3>
+            <p>A collaborative study of quality and consistency in ChatGPT-generated Python code. I co-developed analysis scripts and statistical comparisons for 625 samples and regenerated counterparts, using seven Halstead measures.</p>
+            <p class="role">Research contributor · Paper co-author</p>
+            <div class="links"><a href="https://doi.org/10.1109/ICoSSE62619.2024.00014">Paper <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications" class="section" aria-labelledby="publications-title">
+        <div class="section-head"><h2 id="publications-title">Publications</h2><span class="section-index" aria-hidden="true">02 / PEER REVIEWED</span></div>
+        <ol class="pub-list">
+          <li class="pub"><div class="year">2024</div><div><h3><a href="https://doi.org/10.1145/3649217.3653544">Redux: An Interactive, Dynamic Knowledge Base for Teaching NP-completeness</a></h3><p class="authors">K. Marchetti, A. Ševaljević, A. Diviney, C. Eardley, R. Phillips, R. Khadka, <strong>D. Igbokwe</strong>, and P. Bodily</p><p class="venue">ITiCSE 2024 · ACM · Vol. 1, pp. 255–261 <a href="https://doi.org/10.1145/3649217.3653544">DOI ↗</a></p></div></li>
+          <li class="pub"><div class="year">2024</div><div><h3><a href="https://doi.org/10.1109/ICoSSE62619.2024.00014">A Quantitative Analysis of Quality and Consistency in AI-generated Code</a></h3><p class="authors">A. Clark, <strong>D. Igbokwe</strong>, S. Ross, and M. F. Zibran</p><p class="venue">ICoSSE 2024 · IEEE · pp. 37–41 <a href="https://doi.org/10.1109/ICoSSE62619.2024.00014">DOI ↗</a></p></div></li>
+        </ol>
+        <aside class="abstract" aria-labelledby="abstract-title"><p class="eyebrow">Submitted conference abstract · Decision pending</p><h3 id="abstract-title">Manifold-Guided Intelligent Sampling for Data-Efficient Screening of Ternary Ni-Co-Pt Alloys</h3><p>D. Igbokwe, L. Kerby, and M. Li · 2027 MRS Spring Meeting &amp; Exhibit, Symposium MT02</p><p>Submitted October 14, 2026.</p></aside>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-title"><div><h2 id="contact-title">Get in touch</h2><p>For research conversations and Fall 2027 PhD opportunities.</p></div><div class="contact-links"><a href="mailto:danigbokwe@icloud.com">danigbokwe@icloud.com</a><a href="https://github.com/igbodani">github.com/igbodani ↗</a></div></section>
+    </main>
+    <footer class="footer"><span>Daniel Igbokwe · Research &amp; software</span><span>Updated November 2, 2026</span></footer>
+  </div>
+  <a class="back-to-top" href="#main" aria-label="Back to top" hidden><span aria-hidden="true">↑</span></a>
+</body>
+</html>
